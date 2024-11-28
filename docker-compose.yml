@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:  
+    build: .
+    image: symbol-detection
+    container_name: symbol-detection-container
+    ports:
+      - "8060:8060"
+    volumes:
+      - .:/app
+    
+    restart: always
